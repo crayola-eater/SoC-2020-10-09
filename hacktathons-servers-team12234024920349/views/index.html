@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/normalise.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/icons/favicon-16x16.png"
+    />
+    <title>You Got Served!</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prata&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/add-recipe.css" />
+    <link rel="stylesheet" href="css/recipes.css" />
+    <script src="js/main.js" defer type="module"></script>
+  </head>
+  <body>
+    <div class="overlay" style="display: none">
+      <div class="overlay__modal">
+        <form id="create">
+          <div class="form-item">
+            <label class="form-item__label" for="title">Title:</label>
+            <div class="form-item__body">
+              <input
+                name="title"
+                id="title"
+                type="text"
+                required
+                placeholder="Enter a title"
+              />
+            </div>
+          </div>
+          <div class="form-item">
+            <label class="form-item__label" for="image-url">Image URL:</label>
+            <div class="form-item__body">
+              <input
+                name="image"
+                id="image-url"
+                type="url"
+                placeholder="Enter a valid URL"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-item">
+            <label for="ingredients-input">Ingredients:</label>
+            <div class="form-item__body">
+              <input
+                id="ingredients-input"
+                type="text"
+                placeholder="Enter an ingredient"
+              />
+              <button id="add-ingredient" class="control">➕</button>
+            </div>
+            <ul id="ingredients-list"></ul>
+          </div>
+          <div class="form-item">
+            <label class="form-item__label">Instructions:</label>
+            <div class="form-item__body">
+              <textarea
+                name="instructions"
+                required
+                id="instructions"
+                placeholder="Enter instructions"
+              ></textarea>
+            </div>
+          </div>
+          <div>
+            <button type="submit" id="submit-recipe">Create Recipe</button>
+            <button type="button" id="cancel-recipe-submission">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <main>
+      <header><h1>I Eats</h1></header>
+      <menu id="actions-container">
+        <button id="add-recipe">Add New Recipe!</button>
+        <button id="get-recipes">Grab Latest Meals! ↻</button>
+      </menu>
+      <section id="recipes"></section>
+    </main>
+  </body>
+</html>

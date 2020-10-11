@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Prata", serif;
+  /* font-family: "Amatic SC", cursive; */
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 1rem;
+}

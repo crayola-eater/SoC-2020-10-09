@@ -1,0 +1,152 @@
+.overlay {
+  z-index: 100;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(10, 10, 10, 0.7);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay__modal {
+  z-index: 101;
+  background-color: rgba(255, 243, 226, 0.98);
+  padding: 2rem;
+  border-radius: 5px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+#create {
+  z-index: 102;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  min-width: 85vw;
+}
+
+.form-item__label {
+  grid-area: label;
+}
+
+.form-item__body {
+  grid-area: body;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-item__body :only-child {
+  width: 100%;
+}
+
+#add-ingredient {
+  width: fit-content;
+  padding: 0.5rem;
+}
+
+.form-item {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "label"
+    "body";
+  align-items: center;
+  justify-content: left;
+  margin: 1rem 0;
+  box-shadow: 0 0 10px rgba(109, 8, 25, 0.33);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+#submit-recipe,
+#cancel-recipe-submission {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.form-item > label {
+  margin: 0.5rem 0;
+}
+
+.form-item > button {
+  grid-area: button;
+}
+
+.form-item__body input,
+.form-item__body textarea {
+  border-radius: 3px;
+  grid-area: input;
+  /* margin: 0.5rem 0; */
+  padding: 0.5rem;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border: none;
+  background-color: white;
+  border-bottom: 2px solid rgba(50, 50, 50, 0.2);
+}
+
+#create input:invalid,
+#create textarea:invalid {
+  background-color: rgba(255, 192, 203, 0.6);
+  color: #d40000;
+}
+
+#create input:placeholder-shown,
+#create textarea:placeholder-shown {
+  background-color: white;
+}
+
+.form-item__body textarea {
+  resize: none;
+}
+
+#ingredients-input {
+  width: 100%;
+}
+
+.ingredient {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 5fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.ingredient__controls-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.control {
+  padding: 0.3rem;
+  background: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.ingredient .control:hover,
+.ingredient .control:focus,
+.ingredient .control:active {
+  outline: none;
+  background-color: rgba(255, 215, 221, 0.6);
+  box-shadow: 0 0 10px rgba(50, 50, 50, 0.2);
+}
+
+#ingredients-list {
+  margin-top: 1rem;
+}
+
+.ingredient {
+  margin-top: 0.5rem;
+}
+
+.ingredient input {
+  padding: 0.5rem;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+}

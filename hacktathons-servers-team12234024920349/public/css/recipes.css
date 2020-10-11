@@ -1,0 +1,101 @@
+:root {
+  --light-green: #41a91333;
+  --light-bisque: rgba(255, 255, 255, 0.7);
+  --dark-green: #106d4b;
+  --handwritten: "Rock Salt", cursive;
+}
+
+#recipes {
+  margin: 1rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.recipe {
+  max-width: 700px;
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(10, 10, 10, 0.5);
+  background-color: rgba(255, 243, 226, 0.98);
+  /* background-color: var(--light-green); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  /* display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "name image-container "
+    " ingredients image-container "
+    "instructions image-container "; */
+}
+
+.recipe__image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  max-height: 30vh;
+}
+
+.recipe__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.recipe__name {
+  font-family: var(--handwritten);
+  text-align: center;
+  color: var(--dark-green);
+  border-radius: 2px;
+  font-size: 1.75rem;
+  padding: 1rem;
+  background-color: var(--light-bisque);
+}
+
+.recipe__ingredients-heading,
+.recipe__instructions-heading {
+  font-family: var(--handwritten);
+  padding: 0.5rem;
+  margin-top: 1rem;
+  background-color: var(--light-bisque);
+  color: var(--dark-green);
+}
+
+.recipe__ingredients {
+  padding-left: 2rem;
+}
+
+.recipe > :nth-child(n + 2) {
+  margin-top: 0.5rem;
+}
+
+#actions-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#actions-container > button,
+#submit-recipe,
+#cancel-recipe-submission {
+  padding: 1rem;
+  color: var(--dark-green);
+  font-weight: bold;
+  box-shadow: 0 0 2px var(--light-green);
+  border-radius: 5px;
+  border: 1px solid var(--dark-green);
+}
+
+#actions-container > button:nth-child(n + 2) {
+  margin-left: 0.5rem;
+}

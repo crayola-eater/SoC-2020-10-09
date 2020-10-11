@@ -1,0 +1,25 @@
+{
+  "name": "workshops_servers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-table": "node db/scripts/create-table.js",
+    "drop-table": "node db/scripts/drop-table.js",
+    "populate-table": "node db/scripts/populate-table.js",
+    "reinitialise-table": "node db/scripts/reinitialise-table.js"
+  },
+  "keywords": [],
+  "author": "Chris Meah <chris@schoolofcode.co.uk>",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pg": "^8.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
